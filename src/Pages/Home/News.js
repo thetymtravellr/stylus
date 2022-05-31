@@ -5,7 +5,7 @@ import NewsCard from '../../Component/NewsCard';
 const News = () => {
     const [news, setNews] = useState([]);
     useEffect(()=>{
-        axios.get('https://agile-atoll-96122.herokuapp.com/news')
+        axios.get('https://blooming-sierra-55430.herokuapp.com/news')
         .then(data => setNews(data.data))
     })
     return (

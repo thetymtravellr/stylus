@@ -1,19 +1,9 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import './App.css';
-import RequireAdmin from "./Component/RequireAdmin";
 import RequireAuth from './Component/RequireAuth';
 import useScrollToTop from "./hooks/useScrollToTop";
 import Blog from "./Pages/Blog/Blog";
-import AddProduct from "./Pages/Dashboard/AddProduct";
-import AddReview from "./Pages/Dashboard/AddReview";
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import ManageOrders from "./Pages/Dashboard/ManageOrders";
-import ManageProducts from "./Pages/Dashboard/ManageProducts";
-import ManageUser from "./Pages/Dashboard/ManageUser";
-import MyOrders from "./Pages/Dashboard/MyOrders";
-import MyProfile from "./Pages/Dashboard/MyProfile";
-import Payment from "./Pages/Dashboard/Payment";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
@@ -46,7 +36,7 @@ function App() {
         }/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/dashboard" element={
+        {/* <Route path="/dashboard" element={
           <RequireAuth>
           <Dashboard/>
           </RequireAuth>
@@ -75,7 +65,7 @@ function App() {
               <ManageOrders/>
             </RequireAdmin>
           }/>
-        </Route>
+        </Route> */}
         <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Toaster/>

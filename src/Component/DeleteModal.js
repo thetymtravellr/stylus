@@ -10,7 +10,7 @@ export default function Modal({ id, refetch }) {
   const handleDeleteInventory = () => {
 
     setIsLoading(true);
-    const url = `https://agile-atoll-96122.herokuapp.coms/products/${id}`;
+    const url = `https://blooming-sierra-55430.herokuapp.coms/products/${id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

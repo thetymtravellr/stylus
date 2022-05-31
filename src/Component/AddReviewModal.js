@@ -16,7 +16,7 @@ const AddReviewModal = () => {
       rating: data.rating,
       review: data.review,
     }
-    fetch("https://agile-atoll-96122.herokuapp.com/reviews", {
+    fetch("https://blooming-sierra-55430.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessTOken")}`,

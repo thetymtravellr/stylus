@@ -12,7 +12,7 @@ const DisclosureMenu = () => {
   const [user] = useAuthState(auth);
   
   const { data, isLoading, error } = useQuery('userProfile', async () => {
-    const res = await fetch(`https://agile-atoll-96122.herokuapp.com/user/${user.email}`,{
+    const res = await fetch(`https://blooming-sierra-55430.herokuapp.com/user/${user.email}`,{
       method: 'GET',
       headers: {
         'authorization': `bearer ${localStorage.getItem('accessToken')}`,

@@ -15,7 +15,7 @@ const Tools = () => {
     isLoading,
     error,
   } = useQuery("tools", async () => {
-    const res = await fetch("https://agile-atoll-96122.herokuapp.com/tools");
+    const res = await fetch("https://blooming-sierra-55430.herokuapp.com/tools");
     return res.json();
   });
 
