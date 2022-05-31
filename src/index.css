@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@font-face {
+  font-family: "GilroyBold";
+  src: url("./Assets/fonts/Gilroy-FREE/GilroyExtraBold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("./Assets/fonts/Gilroy-FREE/GilroyLight.otf");
+  font-weight: light;
+}
