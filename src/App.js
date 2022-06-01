@@ -1,9 +1,10 @@
 import { Toaster } from "react-hot-toast";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import './App.css';
 import RequireAuth from './Component/RequireAuth';
 import useScrollToTop from "./hooks/useScrollToTop";
 import Blog from "./Pages/Blog/Blog";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
@@ -16,9 +17,11 @@ import Testimonial from "./Pages/Testimonial/Testmonial";
 
 function App() {
   useScrollToTop();
+  const location = useLocation();
+  console.log(location);
   return (
     <div className="App">
-      <Header></Header>
+      {location.pathname === "/dashboard" || location.pathname === "/register" || location.pathname === '/login'  ? null : <Header></Header>}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/purchase/:id" element={
@@ -36,6 +39,7 @@ function App() {
         }/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         {/* <Route path="/dashboard" element={
           <RequireAuth>
           <Dashboard/>

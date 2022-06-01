@@ -9,7 +9,7 @@ const Header = () => {
   const [user, loading, error] = useAuthState(auth);
 
   return (
-    <header className="flex items-center fixed top-0 w-full border-b-[1px] border-gray-700 bg-slate-700 text-white h-20 z-40">
+    <header className="flex items-center fixed top-0 w-full border-b-[1px] border-gray-700 bg-primary text-white h-20 z-40">
       <div className="flex w-full justify-between items-center mx-auto px-4 md:px-20">
         <h1 className="gilroyBold text-3xl text-neutral uppercase ">Toolers</h1>
         <nav>
