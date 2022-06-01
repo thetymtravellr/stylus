@@ -5,6 +5,7 @@ import RequireAuth from './Component/RequireAuth';
 import useScrollToTop from "./hooks/useScrollToTop";
 import Blog from "./Pages/Blog/Blog";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyProfile from "./Pages/Dashboard/myProfile";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
@@ -40,6 +41,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/myprofile" element={<MyProfile/>}/>
         {/* <Route path="/dashboard" element={
           <RequireAuth>
           <Dashboard/>

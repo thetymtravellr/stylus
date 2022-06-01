@@ -80,6 +80,21 @@ const DisclosureMenu = () => {
                 <p className="text-center text-orange-400">Hello {(data?.name || user.displayName) || 'user'}!</p>
               </Menu.Item>
             </div>
+            <div className="px-1 py-3">
+              <Menu.Item>
+              <CustomLink
+                  to="/myprofile"
+                  className={`
+                    flex w-full items-center rounded-md text-sm font-medium`}
+                >
+                  <DuplicateActiveIcon
+                    className="mr-2 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  My Profile
+                </CustomLink>
+              </Menu.Item>
+            </div>
             <div className="px-1 py-1 block md:hidden">
               <Menu.Item>
                 <CustomLink
