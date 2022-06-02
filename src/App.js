@@ -1,7 +1,7 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes, useLocation } from "react-router-dom";
-import './App.css';
-import RequireAuth from './Component/RequireAuth';
+import "./App.css";
+import RequireAuth from "./Component/RequireAuth";
 import useScrollToTop from "./hooks/useScrollToTop";
 import Blog from "./Pages/Blog/Blog";
 import Dashboard from "./Pages/Dashboard/Dashboard";
@@ -19,29 +19,40 @@ import Testimonial from "./Pages/Testimonial/Testmonial";
 function App() {
   useScrollToTop();
   const location = useLocation();
-  console.log(location);
+ 
   return (
     <div className="App">
-      {location.pathname === "/dashboard" || location.pathname === "/register" || location.pathname === '/login'  ? null : <Header></Header>}
+      {location.pathname === "/dashboard" ||
+      location.pathname === "/register" ||
+      location.pathname === "/login" ? null : (
+        <Header></Header>
+      )}
+      
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/purchase/:id" element={
-          <RequireAuth>
-            <Purchase/>
-          </RequireAuth>
-        }/>
-        <Route path="/blog" element={<Blog/>}/>
-        <Route path="/portfolio" element={<MyPortfolio/>}/>
-        <Route path="/testimonials" element={<Testimonial/>}/>
-        <Route path="/products" element={
-          <RequireAuth>
-            <Products/>
-          </RequireAuth>
-        }/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/myprofile" element={<MyProfile/>}/>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/purchase/:id"
+          element={
+            <RequireAuth>
+              <Purchase />
+            </RequireAuth>
+          }
+        />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/portfolio" element={<MyPortfolio />} />
+        <Route path="/testimonials" element={<Testimonial />} />
+        <Route
+          path="/products"
+          element={
+            <RequireAuth>
+              <Products />
+            </RequireAuth>
+          }
+        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/myprofile" element={<MyProfile />} />
         {/* <Route path="/dashboard" element={
           <RequireAuth>
           <Dashboard/>
@@ -72,9 +83,9 @@ function App() {
             </RequireAdmin>
           }/>
         </Route> */}
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }

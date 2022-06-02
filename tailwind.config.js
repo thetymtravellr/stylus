@@ -4,10 +4,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-
-      backgroundImage: {
-        'offer': "url('https://i.ibb.co/gdys9w0/offerbg.png')"
-      },
       colors: {
         purple: {
           500: '#9669f5',
@@ -39,7 +35,7 @@ module.exports = {
         'fredokaOne': ['Fredoka One', 'cursive']
       },
       backgroundImage: {
-        'hero': ["url('/src/Assets/Images/hero.jpg')"]
+        'hero': ["url('https://i.ibb.co/0r2jfNb/camilla-carvalho-Cgb4g-MKRc-MA-unsplash-2-1.png')"]
       }
     },
   },

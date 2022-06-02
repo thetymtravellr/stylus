@@ -30,3 +30,9 @@ input[type="number"] {
   src: url("./Assets/fonts/Gilroy-FREE/GilroyLight.otf");
   font-weight: light;
 }
+
+@font-face {
+  font-family: "AdihausDIN";
+  src: url("./Assets/fonts/AdihausDINCnBold/AdihausDINCnBold.ttf");
+  font-weight: bold;
+}

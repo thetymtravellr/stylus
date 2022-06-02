@@ -1,18 +1,18 @@
 import React from 'react';
 import Footer from '../Shared/Footer';
 import Banner from './Banner';
-import BusinessReview from './BusinessReview';
 import News from './News';
 import Offer from './Offer';
+import PopularNow from './PopularNow';
 import Reviews from './Reviews';
-import Tools from './Tools';
+import Trending from './Trending';
 
 const Home = () => {
     return (
         <main>
             <Banner></Banner>
-            <Tools></Tools>
-            <BusinessReview></BusinessReview>
+            <PopularNow></PopularNow>
+            <Trending></Trending>
             <News></News>
             <Reviews></Reviews>
             <Offer></Offer>
