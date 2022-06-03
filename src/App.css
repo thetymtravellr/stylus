@@ -39,39 +39,3 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* .shopNowBtn {
-  position: relative;
-  transition: 0.3s ease;
-  background: #fff;
-  color: #000;
-  border-radius: 30px;
-  padding: 20px 50px;
-  font-size: 1.25rem;
-  margin: 32px;
-  transition: transform 0.3s ease;
-}
-
-.shopNowBtn::after,
-.shopNowBtn::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: #000;
-  border-radius: inherit;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.shopNowBtn:hover {
-  transform: translate(-12px, -12px);
-}
-.shopNowBtn:hover::after {
-  transform: translate(6px, 6px);
-}
-.shopNowBtn:hover::before {
-  transform: translate(12px, 12px);
-} */

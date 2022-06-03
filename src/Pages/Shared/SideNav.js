@@ -34,7 +34,7 @@ const SideNav = ({ isOpen, setIsOpen }) => {
             </h1>
           </Link>
           <button
-            className="absolute right-4 top-4 bg-red-500"
+            className="absolute right-4 top-4"
             onClick={() => setIsOpen(false)}
           >
             <XIcon className="w-8" />
