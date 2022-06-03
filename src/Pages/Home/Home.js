@@ -1,10 +1,10 @@
 import React from 'react';
 import Footer from '../Shared/Footer';
 import Banner from './Banner';
-import News from './News';
 import Offer from './Offer';
 import PopularNow from './PopularNow';
 import Reviews from './Reviews';
+import Shop from './Shop';
 import Trending from './Trending';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <PopularNow></PopularNow>
             <Trending></Trending>
-            <News></News>
+            <Shop></Shop>
             <Reviews></Reviews>
             <Offer></Offer>
             <Footer></Footer>

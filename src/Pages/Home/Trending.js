@@ -11,11 +11,17 @@ const Trending = () => {
 
   const [active, setActive] = useState(0);
   const [arrival, setArrival] = useState([]);
+  const [trending, setTrending] = useState([]);
 
   useEffect(() => {
     fetch("arrival.json")
       .then((res) => res.json())
       .then((data) => setArrival(data));
+  }, []);
+  useEffect(() => {
+    fetch("trending.json")
+      .then((res) => res.json())
+      .then((data) => setTrending(data));
   }, []);
 
   return (
@@ -75,11 +81,15 @@ const Trending = () => {
           }}
           navigation
           scrollbar={{ draggable: true }}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
           {active === 0 &&
             arrival.map((item, index) => (
+              <SwiperSlide>
+                <ArrivalCard key={index} item={item}></ArrivalCard>
+              </SwiperSlide>
+            ))}
+          {active === 1 &&
+            trending.map((item, index) => (
               <SwiperSlide>
                 <ArrivalCard key={index} item={item}></ArrivalCard>
               </SwiperSlide>

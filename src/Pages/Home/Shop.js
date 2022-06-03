@@ -2,12 +2,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import NewsCard from '../../Component/NewsCard';
 
-const News = () => {
+const Shop = () => {
     const [news, setNews] = useState([]);
     useEffect(()=>{
         axios.get('https://blooming-sierra-55430.herokuapp.com/news')
         .then(data => setNews(data.data))
     })
+    
     return (
         <section className='min-h-screen my-12'>
             <h1 className='text-4xl font-light text-center mb-8'>From The <span className='font-bold text-indigo-500'>Blog</span></h1>
@@ -20,4 +21,4 @@ const News = () => {
     );
 };
 
-export default News;
+export default Shop;
