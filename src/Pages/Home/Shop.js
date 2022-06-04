@@ -11,10 +11,7 @@ const Shop = () => {
   });
 
   return (
-    <section className="min-h-screen my-12">
-      <h1 className="text-4xl font-light text-center mb-8">
-        From The <span className="font-bold text-indigo-500">Blog</span>
-      </h1>
+    <section className="mt-24">
       <div className="mx-2">
         <Swiper
           className=""

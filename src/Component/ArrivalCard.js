@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const ArrivalCard = ({ item }) => {
     const [liked,setLiked] = useState(false)
   return (
-    <div className="border w-64 h-96 mx-auto hover:border-black">
+    <div className="">
       <div className="relative">
         <button 
         onClick={()=> setLiked(!liked)}
