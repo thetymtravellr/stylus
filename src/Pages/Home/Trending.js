@@ -53,7 +53,7 @@ const Trending = () => {
         </Link>
       </div>
 
-      <div className=" p-4">
+      <div className="p-4">
         <Swiper
           className=""
           style={{zIndex: 1,position: 'relative'}}
