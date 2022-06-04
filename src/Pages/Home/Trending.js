@@ -64,19 +64,23 @@ const Trending = () => {
           breakpoints={{
             640:{
               slidesPerView: 2,
-              slidesPerGroup:2
+              slidesPerGroup:2,
+              spaceBetween:10
             },
             768: {
               slidesPerView: 3,
-              slidesPerGroup:3
+              slidesPerGroup:3,
+              spaceBetween:10
             },
             1060: {
               slidesPerView: 4,
-              slidesPerGroup:4
+              slidesPerGroup:4,
+              spaceBetween:10
             },
             1200: {
               slidesPerView: 5,
-              slidesPerGroup:5
+              slidesPerGroup:5,
+              spaceBetween:10
             },
           }}
           navigation
@@ -84,13 +88,13 @@ const Trending = () => {
         >
           {active === 0 &&
             arrival.map((item, index) => (
-              <SwiperSlide>
+              <SwiperSlide className="w-64 min-h-[320px] mx-auto border hover:border-black">
                 <ArrivalCard key={index} item={item}></ArrivalCard>
               </SwiperSlide>
             ))}
           {active === 1 &&
             trending.map((item, index) => (
-              <SwiperSlide>
+              <SwiperSlide className="w-64 h-96 mx-auto">
                 <ArrivalCard key={index} item={item}></ArrivalCard>
               </SwiperSlide>
             ))}

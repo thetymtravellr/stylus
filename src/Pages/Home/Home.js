@@ -3,7 +3,7 @@ import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import Offer from './Offer';
 import PopularNow from './PopularNow';
-import Reviews from './Reviews';
+import Article from './Article';
 import Shop from './Shop';
 import Trending from './Trending';
 
@@ -14,7 +14,7 @@ const Home = () => {
             <PopularNow></PopularNow>
             <Trending></Trending>
             <Shop></Shop>
-            <Reviews></Reviews>
+            <Article></Article>
             <Offer></Offer>
             <Footer></Footer>
         </main>
