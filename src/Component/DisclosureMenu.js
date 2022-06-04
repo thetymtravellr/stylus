@@ -12,7 +12,7 @@ const DisclosureMenu = () => {
   const [user] = useAuthState(auth);
   
   const { data, isLoading, error } = useQuery('userProfile', async () => {
-    const res = await fetch(`https://agile-atoll-96122.herokuapp.com/user/${user.email}`,{
+    const res = await fetch(`https://blooming-sierra-55430.herokuapp.com/user/${user.email}`,{
       method: 'GET',
       headers: {
         'authorization': `bearer ${localStorage.getItem('accessToken')}`,
@@ -53,14 +53,14 @@ const DisclosureMenu = () => {
     <div className=" text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="group inline-flex w-full justify-center items-center rounded-md bg-black bg-opacity-30 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="group inline-flex w-full justify-center items-center rounded-md bg-black bg-opacity-10 px-1 py-2 text-sm font-medium text-white hover:bg-opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <img
               className="w-8 h-8 object-cover rounded-full"
               src={(data?.img || user?.photoURL) || placeholderImg}
               alt=""
             />
             <ChevronDownIcon
-              className="group-hover:text-violet-500 ml-2 -mr-1 h-5 w-5 "
+              className="group-hover:text-violet-500  -mr-1 h-5 w-5 "
               aria-hidden="true"
             />
           </Menu.Button>
@@ -78,6 +78,21 @@ const DisclosureMenu = () => {
           <div className="px-1 py-3">
               <Menu.Item>
                 <p className="text-center text-orange-400">Hello {(data?.name || user.displayName) || 'user'}!</p>
+              </Menu.Item>
+            </div>
+            <div className="px-1 py-3">
+              <Menu.Item>
+              <CustomLink
+                  to="/myprofile"
+                  className={`
+                    flex w-full items-center rounded-md text-sm font-medium`}
+                >
+                  <DuplicateActiveIcon
+                    className="mr-2 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  My Profile
+                </CustomLink>
               </Menu.Item>
             </div>
             <div className="px-1 py-1 block md:hidden">

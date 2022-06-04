@@ -1,13 +1,12 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
-function CustomLink({ children, to, className, ...props }) {
+function CustomLink({ children, to, ...props }) {
   let resolved = useResolvedPath(to);
   let match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <div className={` w-full h-full  `}>
+    <div className={`p-2 hover:bg-purple-700 rounded ${match ? "bg-purple-700" : ""}`}>
       <Link
-        className={`${className} w-full py-2 px-3 rounded-sm hover:text-white ${match ? "text-white bg-purple-600" : 'text-gray-400' }`}
         to={to}
         {...props}
       >

@@ -5,7 +5,7 @@ import TestimonialCard from './TestimonialCard';
 
 const Testimonial = () => {
     const { data, isLoading, error } = useQuery("reviews", async () => {
-        const res = await fetch("https://agile-atoll-96122.herokuapp.com/reviews");
+        const res = await fetch("https://blooming-sierra-55430.herokuapp.com/reviews");
         return res.json();
       });
     

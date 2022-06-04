@@ -8,7 +8,7 @@ export default function Modal({ id, refetch }) {
 
   const handleCancelOrder = () => {
     setIsLoading(true);
-    const url = `https://agile-atoll-96122.herokuapp.com/order/${id}`;
+    const url = `https://blooming-sierra-55430.herokuapp.com/order/${id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

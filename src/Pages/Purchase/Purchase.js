@@ -1,6 +1,6 @@
 import {
-  MinusCircleIcon,
-  PlusCircleIcon, XIcon
+    MinusCircleIcon,
+    PlusCircleIcon, XIcon
 } from "@heroicons/react/solid";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -31,7 +31,7 @@ const Purchase = () => {
 
   useEffect(() => {
     axios
-      .get(`https://agile-atoll-96122.herokuapp.com/products/${id}`)
+      .get(`https://blooming-sierra-55430.herokuapp.com/products/${id}`)
       .then((data) => setProduct(data.data));
   }, [id, product]);
 
@@ -85,7 +85,7 @@ const Purchase = () => {
       status: 'unpaid',
     };
 
-    fetch("https://agile-atoll-96122.herokuapp.com/orders", {
+    fetch("https://blooming-sierra-55430.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -99,7 +99,7 @@ const Purchase = () => {
         if (data.acknowledged) {
           const newQuantity =
           quantity - parseInt(inputValue);
-          fetch(`https://agile-atoll-96122.herokuapp.com/products/${id}`, {
+          fetch(`https://blooming-sierra-55430.herokuapp.com/products/${id}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",

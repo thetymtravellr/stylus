@@ -1,19 +1,11 @@
 import { Toaster } from "react-hot-toast";
-import { Route, Routes } from "react-router-dom";
-import './App.css';
-import RequireAdmin from "./Component/RequireAdmin";
-import RequireAuth from './Component/RequireAuth';
+import { Route, Routes, useLocation } from "react-router-dom";
+import "./App.css";
+import RequireAuth from "./Component/RequireAuth";
 import useScrollToTop from "./hooks/useScrollToTop";
 import Blog from "./Pages/Blog/Blog";
-import AddProduct from "./Pages/Dashboard/AddProduct";
-import AddReview from "./Pages/Dashboard/AddReview";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import ManageOrders from "./Pages/Dashboard/ManageOrders";
-import ManageProducts from "./Pages/Dashboard/ManageProducts";
-import ManageUser from "./Pages/Dashboard/ManageUser";
-import MyOrders from "./Pages/Dashboard/MyOrders";
-import MyProfile from "./Pages/Dashboard/MyProfile";
-import Payment from "./Pages/Dashboard/Payment";
+import MyProfile from "./Pages/Dashboard/myProfile";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
@@ -26,27 +18,42 @@ import Testimonial from "./Pages/Testimonial/Testmonial";
 
 function App() {
   useScrollToTop();
+  const location = useLocation();
+ 
   return (
     <div className="App">
-      <Header></Header>
+      {location.pathname === "/dashboard" ||
+      location.pathname === "/register" ||
+      location.pathname === "/login" ? null : (
+        <Header></Header>
+      )}
+      
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/purchase/:id" element={
-          <RequireAuth>
-            <Purchase/>
-          </RequireAuth>
-        }/>
-        <Route path="/blog" element={<Blog/>}/>
-        <Route path="/portfolio" element={<MyPortfolio/>}/>
-        <Route path="/testimonials" element={<Testimonial/>}/>
-        <Route path="/products" element={
-          <RequireAuth>
-            <Products/>
-          </RequireAuth>
-        }/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/dashboard" element={
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/purchase/:id"
+          element={
+            <RequireAuth>
+              <Purchase />
+            </RequireAuth>
+          }
+        />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/portfolio" element={<MyPortfolio />} />
+        <Route path="/testimonials" element={<Testimonial />} />
+        <Route
+          path="/products"
+          element={
+            <RequireAuth>
+              <Products />
+            </RequireAuth>
+          }
+        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/myprofile" element={<MyProfile />} />
+        {/* <Route path="/dashboard" element={
           <RequireAuth>
           <Dashboard/>
           </RequireAuth>
@@ -75,10 +82,10 @@ function App() {
               <ManageOrders/>
             </RequireAdmin>
           }/>
-        </Route>
-        <Route path="*" element={<NotFound/>}/>
+        </Route> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const useAdmin = (user) => {
         const email = user?.email;
 
         if(email){
-            axios.get(`https://agile-atoll-96122.herokuapp.com/admin/${email}`)
+            axios.get(`https://blooming-sierra-55430.herokuapp.com/admin/${email}`)
             .then(data => {
                 setAdmin(data?.data?.admin)
                 setAdminLoading(false)

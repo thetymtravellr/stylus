@@ -5,7 +5,7 @@ import Loading from '../Pages/Shared/Loading';
 const useUser = (user) => {
   
     const { data, isLoading, error, refetch } = useQuery('userProfile', async () => {
-      const res = await fetch(`https://agile-atoll-96122.herokuapp.com/user/${user?.email}`,{
+      const res = await fetch(`https://blooming-sierra-55430.herokuapp.com/user/${user?.email}`,{
         method: 'GET',
         headers: {
           'authorization': `bearer ${localStorage.getItem('accessToken')}`,

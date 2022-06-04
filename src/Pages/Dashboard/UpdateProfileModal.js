@@ -52,7 +52,7 @@ const UpdateProfileModal = ({ refetch }) => {
             phone: data.phone,
           };
 
-          fetch(`https://agile-atoll-96122.herokuapp.com/user/update/${user?.email}`, {
+          fetch(`https://blooming-sierra-55430.herokuapp.com/update/${user?.email}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",

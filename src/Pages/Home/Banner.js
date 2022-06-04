@@ -1,26 +1,23 @@
+import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
 import React from "react";
 
 const Banner = () => {
   return (
-    <section className=" bg-slate-400 pb-20">
+    <section className=" bg-center bg-cover min-h-screen w-full bg-hero bg-black/70 bg-blend-darken pt-20">
        <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto min-h-screen">
-       <div className="w-full lg:w2/4 h-full  text-center px-8 order-2 lg:order-1">
-          <h1 className="gilroyBold text-white text-5xl md:text-8xl lg:text-left  text-center uppercase">
+       <div className="w-full lg:w2/4 h-full px-8 order-2 lg:order-1">
+          <h1 className="gilroyBold text-white text-5xl uppercase">
             Trusted
-            <br />
             By
             <br />
-            <span className="text-indigo-500">PROS</span>
+            <span className="text-purple-700"> PROS</span>
           </h1>
-          <p className="lg:text-left  text-center mt-12 text-gray-300 max-w-3xl">
+          <p className=" text-gray-300 max-w-3xl">
             Leading Wholesale Computer Parts Seller In The Region. 
           </p>
-        </div>
-        <div className="order-1 lg:order-2 mt-24 mb-12 lg:my-0 w-full lg:w2/4">
-          {
-            <lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_mn61zlcj.json"  background="transparent"  speed=".5"    loop autoplay></lottie-player>
-          }
-
+          <div className="">
+          <button className="bg-white flex items-center px-5 py-3 text-lg font-bold hover:text-gray-500 mt-8">Shop Now <ArrowNarrowRightIcon className="w-7 ml-3"/></button>
+          </div>
         </div>
        </div>
     </section>
