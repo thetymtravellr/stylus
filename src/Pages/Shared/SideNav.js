@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const SideNav = ({ isOpen, setIsOpen }) => {
-
   const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "-100%" },
@@ -28,10 +27,15 @@ const SideNav = ({ isOpen, setIsOpen }) => {
     >
       <div className="w-full h-full relative p-4">
         <header className="border-b pb-3">
-          <Link to="/">
-            <h1 className="gilroyBold text-3xl uppercase text-center">
-              Toolers
-            </h1>
+          <Link to="/" className="w-fit mx-auto  flex">
+            <button
+              className=""
+              onClick={() => setIsOpen(false)}
+            >
+              <h1 className="gilroyBold text-3xl uppercase text-center text-black">
+                Stylus
+              </h1>
+            </button>
           </Link>
           <button
             className="absolute right-4 top-4"
@@ -42,28 +46,57 @@ const SideNav = ({ isOpen, setIsOpen }) => {
         </header>
         <div>
           <ul className="border-b py-4 flex flex-col space-y-4 text-xl w-full">
-            <li className="font-semibold w-full hover:bg-black/5 p-2">
-              <Link to="/">MEN</Link>
+            <li className=" w-full hover:bg-black/5 p-2">
+              <Link to="/allproducts">
+                <button
+                  className="font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  MEN
+                </button>
+              </Link>
             </li>
             <li className="font-semibold w-full hover:bg-black/5 bg-opacity-5 p-2">
-              <Link to="/">WOMEN</Link>
+              <Link to="/allproducts">
+                <button
+                  className="font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  WOMEN
+                </button>
+              </Link>
             </li>
             <li className="font-semibold w-full hover:bg-black/5 bg-opacity-5 p-2">
-              <Link to="/">KIDS</Link>
+              <Link to="/allproducts">
+                <button
+                  className="font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  KIDS
+                </button>
+              </Link>
             </li>
             <li className="font-light w-full hover:bg-black/5 bg-opacity-5 p-2">
-              <Link to="/">SALE</Link>
+              <Link to="/allproducts">
+                <button className="" onClick={() => setIsOpen(false)}>
+                  SALE
+                </button>
+              </Link>
             </li>
             <li className="font-light w-full hover:bg-black/5 bg-opacity-5 p-2">
-              <Link to="/">3 STRIPE LIFE</Link>
+              <Link to="/allproducts">
+                <button className="" onClick={() => setIsOpen(false)}>
+                  3 STRIPE LIFE
+                </button>
+              </Link>
             </li>
           </ul>
-          <ul className="py-4 flex flex-col text-lg w-full">
+          {/* <ul className="py-4 flex flex-col text-lg w-full">
             <li className="p-1">
-              <Link to="/">MEN</Link>
+              <Link to="/allproducts">MEN</Link>
             </li>
             <li className="p-1">
-              <Link to="/">WOMEN</Link>
+              <Link to="/allproducts">WOMEN</Link>
             </li>
             <li className="p-1">
               <Link to="/">KIDS</Link>
@@ -74,7 +107,7 @@ const SideNav = ({ isOpen, setIsOpen }) => {
             <li className="p-1">
               <Link to="/">3 STRIPE LIFE</Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </motion.div>

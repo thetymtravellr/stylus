@@ -3,11 +3,13 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import RequireAuth from "./Component/RequireAuth";
 import useScrollToTop from "./hooks/useScrollToTop";
+import AllProducts from "./Pages/AllProducts/AllProducts";
 import Blog from "./Pages/Blog/Blog";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyProfile from "./Pages/Dashboard/myProfile";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import MyAccount from "./Pages/MyAccount/MyAccount";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import NotFound from "./Pages/NotFound/NotFound";
 import Products from "./Pages/Products/Products";
@@ -22,14 +24,14 @@ function App() {
  
   return (
     <div className="App">
-      {location.pathname === "/dashboard" ||
+       {location.pathname === "/dashboard" ||
       location.pathname === "/register" ||
       location.pathname === "/login" ? null : (
         <Header></Header>
       )}
-      
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/allproducts" element={<AllProducts />} />
         <Route
           path="/purchase/:id"
           element={
@@ -51,6 +53,11 @@ function App() {
         />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/my-account" element={
+          <RequireAuth>
+            <MyAccount />
+          </RequireAuth>
+        } />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/myprofile" element={<MyProfile />} />
         {/* <Route path="/dashboard" element={

@@ -5,9 +5,9 @@ import React, { useState } from "react";
 const ArrivalCard = ({ item }) => {
     const [liked,setLiked] = useState(false)
   return (
-    <div className="">
-      <div className="relative">
-        <button 
+    <div className="w-60 min-h-[320px] mx-auto border hover:border-black">
+      <div className="relative bg-blue-500 w-full">
+      <button 
         onClick={()=> setLiked(!liked)}
         className="absolute right-4 top-4">
           {
@@ -17,7 +17,7 @@ const ArrivalCard = ({ item }) => {
               liked && <HeartIconSolid className="w-6 text-black " />
           }
         </button>
-        <img className="w-64" src={item.img} alt="" />
+        <img className="w-full" src={item.img} alt="" />
       </div>
       <div className="p-2">
         <h1 className="font-normal text-xs">{item.title}</h1>

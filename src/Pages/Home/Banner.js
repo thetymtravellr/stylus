@@ -1,5 +1,6 @@
 import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -16,7 +17,9 @@ const Banner = () => {
             Leading Wholesale Computer Parts Seller In The Region. 
           </p>
           <div className="">
+          <Link to='/allproducts'>
           <button className="bg-white flex items-center px-5 py-3 text-lg font-bold hover:text-gray-500 mt-8">Shop Now <ArrowNarrowRightIcon className="w-7 ml-3"/></button>
+          </Link>
           </div>
         </div>
        </div>

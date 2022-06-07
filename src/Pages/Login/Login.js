@@ -13,7 +13,7 @@ const Login = () => {
   const location = useLocation()
   const from = location.state?.from?.pathname || '/'
   const [user, loading, error] = useAuthState(auth)
- 
+  console.log(user)
   const [
     signInWithEmailAndPassword,
     emailUser,

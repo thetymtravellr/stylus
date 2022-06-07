@@ -15,37 +15,37 @@ const Header = () => {
   <header className="flex flex-col items-center sticky top-0 w-full border-b-[1px] h-16 z-40">
   <NoticeBoard/>
   <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
-    <div className="bg-white w-full">
+    <div className="bg-white w-full px-2">
       <div className="flex w-full justify-between items-center mx-auto py-2">
         <div className="block lg:hidden">
           <button onClick={() => setIsOpen(true)}>
             <MenuAlt2Icon className="text-black w-10 pl-2"/>
           </button>
         </div>
-        <Link to='/'><h1 className="gilroyBold text-3xl uppercase">Toolers</h1></Link>
+        <Link to='/'><h1 className="gilroyBold text-3xl text-black uppercase">Stylus</h1></Link>
         <nav className="hidden lg:block">
         <ul className="flex items-center space-x-6 font-poppins uppercase text-sm font-semibold text-black">
             <li className="">
-              <Link to="/">MEN</Link>
+              <Link to="/allproducts">MEN</Link>
             </li>
             <li className="">
-              <Link to="/">WOMEN</Link>
+              <Link to="/allproducts">WOMEN</Link>
             </li>
             <li className="">
-              <Link to="/">KIDS</Link>
+              <Link to="/allproducts">KIDS</Link>
             </li>
             <li className="">
-              <Link to="/">SALE</Link>
+              <Link to="/allproducts">SALE</Link>
             </li>
             <li className="">
-              <Link to="/">3 STRIPE LIFE</Link>
+              <Link to="/allproducts">3 STRIPE LIFE</Link>
             </li>
           </ul>
         </nav>
         <nav>
           <ul className="flex items-center space-x-6 font-poppins uppercase text-sm font-semibold text-base-100">
             <li className="">
-              <Link to="/">
+              <Link to="/my-account">
                 <UserIcon className="w-6 h-6 text-black"/>
               </Link>
             </li>

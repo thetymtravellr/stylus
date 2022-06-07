@@ -78,8 +78,8 @@ const Trending = () => {
               spaceBetween:10
             },
             1200: {
-              slidesPerView: 5,
-              slidesPerGroup:5,
+              slidesPerView: 6,
+              slidesPerGroup:6,
               spaceBetween:10
             },
           }}
@@ -88,13 +88,13 @@ const Trending = () => {
         >
           {active === 0 &&
             arrival.map((item, index) => (
-              <SwiperSlide className="w-64 min-h-[320px] mx-auto border hover:border-black">
+              <SwiperSlide className="">
                 <ArrivalCard key={index} item={item}></ArrivalCard>
               </SwiperSlide>
             ))}
           {active === 1 &&
             trending.map((item, index) => (
-              <SwiperSlide className="w-64 h-96 mx-auto">
+              <SwiperSlide className="">
                 <ArrivalCard key={index} item={item}></ArrivalCard>
               </SwiperSlide>
             ))}
